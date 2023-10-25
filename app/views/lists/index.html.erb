@@ -3,6 +3,9 @@
 <% @lists.each do |list| %>
 
   <p>タイトル</p>
-  <span><%= list.title %></span>
+  <!-- <span><%= list.title %></span> を削除して、以下コードに変更 -->
+  <span>
+    <%= link_to list.title, list_path(list.id) %>
+  </span>
   
 <% end %>
